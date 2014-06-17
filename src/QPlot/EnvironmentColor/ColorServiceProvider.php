@@ -40,13 +40,16 @@ class ColorServiceProvider extends ServiceProvider {
 //        $this->package('qplot/environment-color');
 
         $app = $this->app;
-//        $app['config']->package('barryvdh/laravel-debugbar', $this->guessPackagePath() . '/config');
+        $app['config']->package('qplot/environment-color', $this->guessPackagePath() . '/config');
 
-        $app->after(function ($request, $response) use($app)
+        if($app['config']->get('environment-color::config.enabled'))
         {
-            $color = $app['environment-color'];
-            $color->modifyResponse($request, $response);
-        });
+            $app->after(function ($request, $response) use ($app)
+            {
+                $color = $app['environment-color'];
+                $color->modifyResponse($request, $response);
+            });
+        }
     }
 
 }
