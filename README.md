@@ -9,9 +9,19 @@ The color bar is set to be enabled when debug mode is on by default.
 
 ### Installation
 
-Run `composer require qplot/environment-color:0.1`
+Add package to the `composer.json` file
 
-Add `'QPlot\EnvironmentColor\ColorServiceProvider'` to `providers` in `app/config/app.php`
+	"require": {
+        "qplot/environment-color": "dev-master"
+        
+Then run composer update,
+        
+    composer update
+
+Add provider `app/config/app.php` file
+
+	'providers' => array(
+        'QPlot\EnvironmentColor\ColorServiceProvider'
 
 ### Changelog
 
