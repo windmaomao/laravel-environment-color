@@ -1,0 +1,31 @@
+{
+    "name": "qplot/environment-color",
+    "description": "Environment Color for Laravel",
+    "keywords": ["laravel", "environment", "indicator", "color", "local"],
+    "homepage": "https://github.com/windmaomao/laravel-environment-color",
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Fang Jin",
+            "email": "fjin@qplot.com",
+            "homepage": "http://qplot.com",
+            "role": "Architect"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "~4.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "QPlot\\EnvironmentColor": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.x.0-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
