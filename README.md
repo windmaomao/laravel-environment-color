@@ -22,6 +22,11 @@ Add provider `app/config/app.php` file
 
 	'providers' => array(
         'QPlot\EnvironmentColor\ColorServiceProvider'
+        
+### Todo
+
+* Publish the config file 
+* Make bar height adjustable
 
 ### Changelog
 
