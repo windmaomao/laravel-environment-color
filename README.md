@@ -1,6 +1,7 @@
-# Environment Detector for Laravel 4
+# Environment Color for Laravel 4
 
-Adds an environment indicator color bar to either top or bottom of all pages. 
+Adds an environment indicator color bar to either top or bottom of all pages to indicate 
+if you are working in 'local' or 'production' environment. 
  
 Use config.php to change position, color for default or 'local' environment.
 
