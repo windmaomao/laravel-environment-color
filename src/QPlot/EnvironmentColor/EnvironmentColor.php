@@ -36,10 +36,21 @@ class EnvironmentColor {
     public function modifyResponse($request, $response) {
         $content = $response->getContent();
 
-        $renderedContent = '<div style="width: 100%; height:10px; background-color: purple"></div>';
+        // Get the color for the environment.
+        $colors = $this->app['config']->get('environment-color::config.colors');
+        $env = $this->app['config']->getEnvironment();
 
+        $color = 'black';
+        if (isset($colors['default'])) {
+            $color = $colors['default'];
+        }
+        if (isset($colors[$env])) {
+            $color = $colors[$env];
+        }
+        $renderedContent = '<div style="width: 100%; height:10px; background-color: ' . $color . '"></div>';
+
+        // Set to the right position.
         $position = $this->app['config']->get('environment-color::config.position');
-
         if ($position == 'top') {
             $pos = mb_strrpos($content, '<body>');
             if (false !== $pos) {
