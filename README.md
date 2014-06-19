@@ -23,6 +23,10 @@ Add provider `app/config/app.php` file
 	'providers' => array(
         'QPlot\EnvironmentColor\ColorServiceProvider'
         
+To change settings `app/config/packages/qplot/environment-color/config.php`, you need to first publish config file, 
+
+    php artisan config:publish qplot/environment-color 
+        
 ### Todo
 
 * Publish the config file 
