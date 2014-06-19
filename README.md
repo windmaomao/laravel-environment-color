@@ -29,7 +29,6 @@ To change settings `app/config/packages/qplot/environment-color/config.php`, you
         
 ### Todo
 
-* Publish the config file 
 * Make bar height adjustable
 
 ### Changelog
